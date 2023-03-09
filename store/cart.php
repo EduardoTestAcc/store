@@ -24,25 +24,11 @@ session_start();
 <hr>
 <p># items price</p>
 <ul>
-    <li>
-        <input type="number" name="" id="">
-        <label for="">item name</label>
-        <label for="">$$$</label>
-        <button>x</button>
-    </li>
-    <li>
-        <input type="number" name="" id="">
-        <label for="">item name</label>
-        <label for="">$$$</label>
-        <button>x</button>
-    </li>
-    <li>
-        <input type="number" name="" id="">
-        <label for="">item name</label>
-        <label for="">$$$</label>
-        <button>x</button>
-    </li>
+    <?php include 'php/get_items.php'; ?>
 </ul>
 <hr>
+<p>Subtotal $...</p>
+<a href="">go back</a>
+<a href="checkout.php">checkout</a>
 </body>
 </html>

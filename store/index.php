@@ -1,6 +1,9 @@
 <?php
 session_start();
-$_SESSION['items_id'] = array();
+if (!@$_SESSION['items_id']) {
+    $_SESSION['items_id'] = array();
+}
+
 ?>
 <!DOCTYPE html>
 <html>
