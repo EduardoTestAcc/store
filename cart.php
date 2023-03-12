@@ -39,10 +39,10 @@ session_start();
 <ul class="items-list">
     <?php include 'php/get_items.php'; ?>
 
-<form action="<?php echo htmlspecialchars('checkout.php');?>">
+<form method="post" action="<?php echo htmlspecialchars('checkout.php');?>">
 <field class="nick-input">
     <label for="username">Nombre de usuario</label>
-    <input type="text" name="" id="username" required>
+    <input type="text" name="username" id="username" required>
     <br>
     <a href="">go back</a>
     <input type="submit" value="Checkout">

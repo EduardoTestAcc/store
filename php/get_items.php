@@ -15,7 +15,7 @@ for ($i=0; $i < count($_SESSION['items_id']) ; $i++) {
             echo '<li>';
             echo '<input type="number" name="" id="" min="1">';
             echo '<label for="">'. $row['item_name'] .'</label>';
-            echo '<label for="">'. $row['item_price'] .'</label>';
+            echo '<label for="">$'. $row['item_price'] .'</label>';
             echo '<button id="'.$row['item_id'].'-btn">x</button>';
             echo '</li>';
             $total_price += floatval($row['item_price']);
@@ -24,7 +24,11 @@ for ($i=0; $i < count($_SESSION['items_id']) ; $i++) {
 }
 echo '</ul>';
 echo '<hr>';
-echo '<p>Subtotal $'.$total_price.'</p>';
-
+echo '<div style="display:grid; grid-template-columns: 10% 15% 10% 10%;margin-left:10%">';
+echo '<p>Subtotal</p>';
+echo '<div></div>';
+echo '<p>$'.$total_price.'</p>';
+echo '</div>';
+$_SESSION['total_price'] = $total_price;
 $mysqli->close();
 ?>
