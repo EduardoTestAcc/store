@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    background: #c2c2c2;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+}
+
+#svg-line {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #e8e8e8;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: relative;
+}
+
+#nav {
+    color: #444;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+#nav:hover {
+    color: #000;
+}
+
+#nav::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #444;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+    
+}
+
+#nav:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+h2 {
+    margin-left: 10%;
+}
+
+.grid {
+    display: grid;
+    position: relative;
+    grid-template-columns: 10% 15% 10%;
+    margin-left: 10%;
+}
+
+field .nick-input {
+    display: grid;
+}
+
+form {
+    margin-left: 10%;
+}
+
+.items-list {
+    margin-left: 10%;
+    padding-left: 0;
+}
+
+.items-list input {
+    width: 3rem;
+    height: 2rem;
+    text-align: center;
+}
+
+.items-list li {
+    display: grid;
+    grid-template-columns: 10% 15% 10% 10%;
+}

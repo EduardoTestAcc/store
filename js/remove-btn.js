@@ -1,0 +1,2 @@
+const buttons = new Array();
+
