@@ -5,11 +5,11 @@ $mysqli = new mysqli("localhost", "root", "", "shop");
 if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);
 }
-
+$total_price = 0;
 for ($i=0; $i < count($_SESSION['items_id']) ; $i++) { 
     $sql = "select item_id, item_name, item_price from item where item_id = ". $_SESSION['items_id'][$i];
     $result = $mysqli->query($sql);
-    $total_price = 0;
+    
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
             echo '<li>';
@@ -20,9 +20,11 @@ for ($i=0; $i < count($_SESSION['items_id']) ; $i++) {
             echo '</li>';
             $total_price += floatval($row['item_price']);
         }
-        
     }
 }
+echo '</ul>';
+echo '<hr>';
+echo '<p>Subtotal $'.$total_price.'</p>';
 
 $mysqli->close();
 ?>

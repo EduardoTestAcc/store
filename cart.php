@@ -38,15 +38,6 @@ session_start();
 </div>
 <ul class="items-list">
     <?php include 'php/get_items.php'; ?>
-    <li>
-        <input type="number" name="" id="">
-        <label for="">'. $row['item_name'] .'</label>
-        <label for="">'. $row['item_price'] .'</label>
-        <button id="">x</button>
-    </li>
-</ul>
-<hr>
-<p>Subtotal $...</p>
 
 <form action="<?php echo htmlspecialchars('checkout.php');?>">
 <field class="nick-input">
